@@ -79,3 +79,30 @@ const obs = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
 
+// Lightbox for photos
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lightboxImg");
+const lbClose = document.getElementById("lightboxClose");
+
+function openLightbox(src){
+  if (!lb || !lbImg) return;
+  lbImg.src = src;
+  lb.classList.add("open");
+  lb.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+function closeLightbox(){
+  if (!lb) return;
+  lb.classList.remove("open");
+  lb.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  if (lbImg) lbImg.src = "";
+}
+
+document.querySelectorAll(".shot[data-full]").forEach(btn => {
+  btn.addEventListener("click", () => openLightbox(btn.getAttribute("data-full")));
+});
+
+if (lbClose) lbClose.addEventListener("click", closeLightbox);
+if (lb) lb.addEventListener("click", (e) => { if (e.target === lb) closeLightbox(); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
