@@ -67,7 +67,9 @@ h1{font-size:18px; margin:0}
   flex-wrap:wrap;
   align-items:center;
 }
-.ico{display:inline-grid; place-items:center}
+.ico svg{
+  display:block;
+}
 
 /* Buttons */
 .btn{
