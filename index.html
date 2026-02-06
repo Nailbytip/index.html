@@ -51,3 +51,94 @@
               <li>Best: book on LINE</li>
               <li>Prices may vary by length</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="manicure">Manicure</button>
+      <button class="pill" data-filter="gel">Gel</button>
+      <button class="pill" data-filter="extensions">Extensions</button>
+      <button class="pill" data-filter="extras">Extras</button>
+
+      <div class="spacer"></div>
+
+      <label class="toggle">
+        <input type="checkbox" id="langToggle" />
+        <span>TH / EN</span>
+      </label>
+    </section>
+
+    <section class="grid">
+      <article class="card" data-cat="manicure">
+        <div class="card-head">
+          <h3 data-en="Manicure" data-th="ทำเล็บมือ (Manicure)">Manicure</h3>
+          <span class="badge">Popular</span>
+        </div>
+        <div class="row"><span data-en="Classic manicure" data-th="ทำเล็บมือพื้นฐาน">Classic manicure</span><span>200 THB</span></div>
+        <div class="row"><span data-en="Manicure + polish" data-th="ทำเล็บ + ทาสี">Manicure + polish</span><span>300 THB</span></div>
+        <div class="row"><span data-en="Cuticle care" data-th="ตัดหนังรอบเล็บ">Cuticle care</span><span>150 THB</span></div>
+        <p class="note" data-en="* Prices may vary with nail condition." data-th="* ราคาอาจเปลี่ยนตามสภาพเล็บ">* Prices may vary with nail condition.</p>
+      </article>
+
+      <article class="card" data-cat="gel">
+        <div class="card-head">
+          <h3 data-en="Gel" data-th="เจล (Gel)">Gel</h3>
+        </div>
+        <div class="row"><span data-en="Gel color" data-th="เจลสี">Gel color</span><span>500 THB</span></div>
+        <div class="row"><span data-en="Gel French" data-th="เฟรนช์เจล">Gel French</span><span>650 THB</span></div>
+        <div class="row"><span data-en="Gel removal" data-th="ถอดเจล">Gel removal</span><span>150 THB</span></div>
+        <p class="note" data-en="Add-ons: art / stones / chrome." data-th="เพิ่มได้: ลาย / เพชร / โครม">Add-ons: art / stones / chrome.</p>
+      </article>
+
+      <article class="card" data-cat="extensions">
+        <div class="card-head">
+          <h3 data-en="Extensions" data-th="ต่อเล็บ (Extensions)">Extensions</h3>
+        </div>
+        <div class="row"><span data-en="Extension (short)" data-th="ต่อเล็บ (สั้น)">Extension (short)</span><span>900 THB</span></div>
+        <div class="row"><span data-en="Extension (long)" data-th="ต่อเล็บ (ยาว)">Extension (long)</span><span>1200 THB</span></div>
+        <div class="row"><span data-en="Refill" data-th="เติมโคน">Refill</span><span>700 THB</span></div>
+        <p class="note" data-en="Length categories can be shown at the shop." data-th="สามารถดูความยาวตัวอย่างได้ที่ร้าน">Length categories can be shown at the shop.</p>
+      </article>
+
+      <article class="card" data-cat="extras">
+        <div class="card-head">
+          <h3 data-en="Design / Extras" data-th="ลาย / เพิ่มเติม">Design / Extras</h3>
+        </div>
+        <div class="row"><span data-en="Simple nail art (per nail)" data-th="ลายง่าย (ต่อเล็บ 1 นิ้ว)">Simple nail art (per nail)</span><span>20–50 THB</span></div>
+        <div class="row"><span data-en="Stones (per piece)" data-th="เพชร (ต่อชิ้น)">Stones (per piece)</span><span>10–30 THB</span></div>
+        <div class="row"><span data-en="Chrome / cat-eye" data-th="โครม / แคทอาย">Chrome / cat-eye</span><span>+150 THB</span></div>
+        <p class="note" data-en="Show a reference photo on your phone." data-th="โชว์รูปตัวอย่างจากมือถือได้เลย">Show a reference photo on your phone.</p>
+      </article>
+    </section>
+
+    <section class="card promo">
+      <div>
+        <h3 data-en="Promo" data-th="โปรโมชัน">Promo</h3>
+        <p class="muted" data-en="You can update this anytime (QR stays the same)." data-th="แก้ราคา/โปรได้ตลอด (QR เดิมใช้ได้)">You can update this anytime (QR stays the same).</p>
+      </div>
+      <div class="promo-box">
+        <div class="promo-title" data-en="Gel + simple art" data-th="เจลสี + ลายง่าย">Gel + simple art</div>
+        <div class="promo-price">650 THB</div>
+        <div class="promo-sub" data-en="Mon–Thu" data-th="จันทร์–พฤหัส">Mon–Thu</div>
+      </div>
+    </section>
+
+    <section class="card" id="map">
+      <h3 data-en="Location" data-th="ที่ตั้ง">Location</h3>
+      <p class="muted" data-en="Replace the link with your Google Maps place link." data-th="เปลี่ยนลิงก์เป็น Google Maps ของร้านคุณ">Replace the link with your Google Maps place link.</p>
+      <a class="btn btn-map" href="https://maps.google.com/?q=Koh+Chang+Nail+Studio" target="_blank" rel="noreferrer">
+        Open in Google Maps
+      </a>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Koh Chang Nail Studio</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
