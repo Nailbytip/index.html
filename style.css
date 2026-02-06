@@ -336,3 +336,25 @@ h3{margin:0; font-size:15px}
   object-fit:cover;
   display:block;
 }
+
+/* Mobile header layout: 2 lines */
+@media (max-width: 560px){
+  .header{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand lang"
+      "cta   cta";
+    gap:10px;
+  }
+  .brand{grid-area:brand}
+  .lang{grid-area:lang; justify-self:end}
+  .cta{grid-area:cta}
+
+  /* keep buttons on one row if possible */
+  .cta{flex-wrap:nowrap; overflow:auto; -webkit-overflow-scrolling:touch}
+  .cta::-webkit-scrollbar{display:none}
+
+  /* make buttons slightly tighter */
+  .btn{padding:9px 10px}
+}
