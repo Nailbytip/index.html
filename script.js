@@ -17,8 +17,6 @@ function safeSetHref(id, href){
 
 // Year + Updated
 safeSetText("#year", new Date().getFullYear());
-const updated = new Date().toLocaleDateString(undefined, { year:"numeric", month:"short", day:"numeric" });
-safeSetText("#updatedPill", `Updated: ${updated}`);
 
 // WhatsApp links (prefill)
 const waBase = `https://wa.me/${WHATSAPP_PHONE_E164}`;
