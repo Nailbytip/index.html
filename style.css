@@ -374,3 +374,9 @@ h3{margin:0; font-size:15px}
     display:none;
   }
 }
+
+@media (max-width: 600px){
+  #langBtn{
+    margin-left:auto;
+  }
+}
